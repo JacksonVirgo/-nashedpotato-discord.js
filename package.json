@@ -1,0 +1,22 @@
+{
+	"name": "@jacksonvirgo/discord.js",
+	"version": "0.0.3",
+	"author": "Jack Nash",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"module": "dist/index.mjs",
+	"scripts": {
+		"build": "tsup index.ts --format cjs,esm --dts",
+		"release": "pnpm run build && changeset publish",
+		"lint": "tsc"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.26.2",
+		"tsup": "^7.2.0",
+		"typescript": "^5.2.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
